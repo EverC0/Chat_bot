@@ -1,8 +1,8 @@
 "use client"
-import{Box, Button, Stack, TextField} from '@mui/material'
+import{Box, Button, Container, Stack, TextField, Typography} from '@mui/material'
 import { useState } from "react";
 
-const page = () => {
+const Page = () => {
 
 
     const [messages, setMessages] = useState([
@@ -63,86 +63,128 @@ const page = () => {
       }
     
       return (
-    
+
+        // <Container>
         <Box 
-          width="100vw"
-          height="100vh"
+        width="100vw"
+        height="120vh"
+        display="flex"
+        flexDirection={'column'}
+        justifyContent="center"
+        alignItems="center"
+        >
+
+        <Box
+          width="50vw"
+          height="10vh"
           display="flex"
-          flexDirection= "column"
           justifyContent="center"
           alignItems="center"
+          border="none"
+          borderRadius="10px"
+          boxShadow="0px 4px 15px rgba(255, 255, 255, 0.2)" // Adjusted shadow for visibility against black background
+          bgcolor="inherit"
+        >
+          <Typography
+            margin={2}
+            fontWeight="bold"
+            fontSize="24px"
+            letterSpacing="1px"
+            color="#C0C0C0" 
+            
           >
-            {/*  */}
-            <Stack 
-              direction={'column'} 
-              width="500px" 
-              height="700px"
-              border="1px solid black"
-              p={2}
-              spacing={3}
-            >
-              {/* The outermost Stack serves as the main container for your chat interface.
-            It controls the overall layout and dimensions of the chat window, 
-            including the area where the messages are displayed and the input field at the bottom */}
-              <Stack 
-                direction={'column'} 
-                spacing={2} 
-                flexGrow={1} 
-                overflow="auto" 
-                maxHeight="100%"
-                >
-                  {/* The inner Stack inside the outer Stack is specifically responsible 
-                  for organizing and displaying the individual messages in a vertical list.  */}
-                { messages.map((message, index) => (
-    
-                    <Box
-                      key={index}
-                      display="flex"
-                      justifyContent={
-                        message.role === 'assistant' ? 'flex-start' : 'flex-end'
-                      }
-                    >
-                      {/* // If the role is 'assistant', align the message to the left ('flex-start')
-                      // Otherwise, align the message to the right ('flex-end') */}
-    
-                        {/* Inner Box: Represents the actual message bubble with specific styling */}
-    
-                      <Box
-                        bgcolor={ 
-                          message.role === 'assistant' 
-                          ? 'primary.main' 
-                          : 'secondary.main'}
-                        color="white"
-                        borderRadius={12}
-                        p={3}
-                        boxShadow={"initial"}
-                        >
-                          {message.content}
-                      </Box>
-                    </Box>
-                  ))}
-              </Stack>
-    
-              <Stack direction={'row'} spacing={2}>
-                <TextField 
-                  label="Message" 
-                  fullWidth
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}/>
-                <Button 
-                  variant='contained'
-                  onClick={sendMessage}
-                  > 
-                  Send 
-                </Button>
-              </Stack>
-    
-            </Stack>
-    
+            Chat Bot
+          </Typography>
         </Box>
+
+      
+            <Box 
+              width="100vw"
+              height="100vh"
+              display="flex"
+              flexDirection= "column"
+              justifyContent="center"
+              alignItems="center"
+              >
+                {/*  */}
+                <Stack 
+                  direction={'column'} 
+                  width="500px" 
+                  height="700px"
+                  border="15px solid black"
+                  borderRadius='5px'
+                  boxShadow="0px 4px 15px rgba(255, 255, 255, 0.2)"
+                  p={2}
+                  spacing={3}
+                >
+                  {/* The outermost Stack serves as the main container for your chat interface.
+                It controls the overall layout and dimensions of the chat window, 
+                including the area where the messages are displayed and the input field at the bottom */}
+                  <Stack 
+                    direction={'column'} 
+                    spacing={2} 
+                    flexGrow={1} 
+                    overflow="auto" 
+                    maxHeight="100%"
+                    >
+                      {/* The inner Stack inside the outer Stack is specifically responsible 
+                      for organizing and displaying the individual messages in a vertical list.  */}
+                    { messages.map((message, index) => (
+        
+                        <Box
+                          key={index}
+                          display="flex"
+                          justifyContent={
+                            message.role === 'assistant' ? 'flex-start' : 'flex-end'
+                          }
+                        >
+                          {/* // If the role is 'assistant', align the message to the left ('flex-start')
+                          // Otherwise, align the message to the right ('flex-end') */}
+        
+                            {/* Inner Box: Represents the actual message bubble with specific styling */}
+        
+                          <Box
+                            bgcolor={ 
+                              message.role === 'assistant' 
+                              ? 'primary.main' 
+                              : 'secondary.main'}
+                            sx={{
+                            color:"#eeeeee",
+                            borderRadius:4,
+                            p:3,
+                            boxShadow:"initial",
+                            // fontWeight:"lighter",
+                            textShadow:"2px 2px 5px rgba(0, 0, 0, 0.5)" }}
+                            >
+                              {message.content}
+                          </Box>
+                        </Box>
+                      ))}
+                  </Stack>
+        
+                  <Stack direction={'row'} spacing={2}>
+                    <TextField 
+                      label="Message" 
+                      fullWidth
+                      value={message}
+                      sx={{color:'#eeeeee'}}
+                      onChange={(e) => setMessage(e.target.value)}/>
+                    <Button 
+                      variant='contained'
+                      onClick={sendMessage}
+                      sx={{color:'#C0C0C0'}}
+                      > 
+                      Send 
+                    </Button>
+                  </Stack>
+        
+                </Stack>
+        
+            </Box>
+          </Box>
        
       )
 
 }
 
-export default page
+export default Page

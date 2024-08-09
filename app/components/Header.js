@@ -5,7 +5,7 @@ import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
     const router = useRouter();
 
     const handleNavigation = (path) => {
@@ -25,19 +25,19 @@ const page = () => {
       <AppBar position="static"
         >
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1, }}>
+          <Typography variant="h6" sx={{ flexGrow: 1, color:'#C0C0C0' }}>
             Website
           </Typography>
-          <Button sx={{buttonStyles}} onClick={() => handleNavigation('/')}>
+          <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/')}>
             Home
           </Button>
-          <Button sx={{buttonStyles}} onClick={() => handleNavigation('/pantry')}>
+          {/* <Button sx={{buttonStyles}} onClick={() => handleNavigation('/pantry')}>
             ChatArea
-          </Button>
-          <Button sx={{buttonStyles}} onClick={() => handleNavigation('/Viewall')}>
+          </Button> */}
+          <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/chatContain')}>
             View
           </Button>
-          <Button sx={{buttonStyles}} onClick={() => handleNavigation('/LogOff')}>
+          <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/LogOff')}>
             LogOff
           </Button>
         </Toolbar>
@@ -46,4 +46,4 @@ const page = () => {
     
 }
 
-export default page
+export default Page

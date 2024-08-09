@@ -7,10 +7,10 @@ const theme = createTheme({
   palette: {
     mode: 'dark', // Set the theme mode to dark
     primary: {
-      main: '#bb86fc', // Customize primary color if needed
+      main: '#000', // Customize primary color if needed next: #7b49b8 or b86fc
     },
     secondary: {
-      main: '#03dac6', // Customize secondary color if needed
+      main: '#C0C0C0', // Customize secondary color if needed or #C0C0C0 or #03dac6
     },
     background: {
       default: '#121212', // Default background for dark mode
