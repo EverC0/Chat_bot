@@ -66,24 +66,37 @@ const Page = () => {
 
         // <Container>
         <Box 
-        width="100vw"
-        height="120vh"
-        display="flex"
-        flexDirection={'column'}
-        justifyContent="center"
-        alignItems="center"
+          display="flex"
+          flexDirection="column"
+          width="100%"
+          minHeight="110vh"
+          justifyContent="flex-start"
+          alignItems="center"
+          sx={{
+            '@media (max-width: 600px)': {
+              width: '100%', // Adjust width for small screens
+            },
+          }}
         >
 
         <Box
-          width="50vw"
-          height="10vh"
+          width="25%"
+          height="9vh"
           display="flex"
           justifyContent="center"
           alignItems="center"
-          border="none"
-          borderRadius="10px"
+          border="2px solid black"
+          borderRadius="5px"
+          mb={3}
+          marginTop={2}
           boxShadow="0px 4px 15px rgba(255, 255, 255, 0.2)" // Adjusted shadow for visibility against black background
           bgcolor="inherit"
+          sx={{
+            '@media (max-width: 600px)': {
+              width: '90%', // Adjust width for small screens
+              height: '8vh', // Adjust height if needed
+            },
+          }}
         >
           <Typography
             margin={2}
@@ -100,7 +113,7 @@ const Page = () => {
       
             <Box 
               width="100vw"
-              height="100vh"
+              height="70vh"
               display="flex"
               flexDirection= "column"
               justifyContent="center"
@@ -108,11 +121,19 @@ const Page = () => {
               >
                 {/*  */}
                 <Stack 
-                  direction={'column'} 
-                  width="500px" 
-                  height="700px"
-                  border="15px solid black"
-                  borderRadius='5px'
+                  width="70%"
+                  flexGrow={1}
+                  display="flex"
+                  flexDirection="column"
+                  border="2px solid black"
+                  borderRadius="5px"
+                  overflow="hidden"
+                  sx={{
+                    '@media (max-width: 600px)': {
+                      width: '90%', // Adjust width for small screens
+                    },
+                  }}
+              
                   boxShadow="0px 4px 15px rgba(255, 255, 255, 0.2)"
                   p={2}
                   spacing={3}

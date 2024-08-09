@@ -31,11 +31,11 @@ const Page = () => {
           <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/')}>
             Home
           </Button>
-          {/* <Button sx={{buttonStyles}} onClick={() => handleNavigation('/pantry')}>
-            ChatArea
-          </Button> */}
+          <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/pantry')}>
+            Login
+          </Button>
           <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/chatContain')}>
-            View
+            ChatArea
           </Button>
           <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/LogOff')}>
             LogOff
