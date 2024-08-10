@@ -48,31 +48,31 @@ const HomePage = () => {
       <Typography variant="h4" sx={{ marginBottom: '1rem' }}>
         This is an AI customer support to help with your issues.
       </Typography>
-      <Typography variant="h5" sx={{ maxWidth: '800px', marginBottom: '2rem' }}>
+      <Typography variant="h5" sx={{ maxWidth: '800px', marginBottom: '2rem',  }}>
         Our AI-driven chatbot is designed to provide instant assistance, answer your queries, and guide you through any challenges you may encounter. Whether it's troubleshooting, product recommendations, or just a quick question, our chatbot is here to help you 24/7.
       </Typography>
-      <Typography variant="h6" sx={{ maxWidth: '800px' }}>
+      <Typography variant="h6" sx={{ maxWidth: '800px', paddingBottom:'2rem' }}>
         Key Features:
       </Typography>
       <ul style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto', padding: '0', listStyle: 'none' }}>
         <li style={{ marginBottom: '1rem' }}>
           <Typography variant="body1">
-            <strong>Instant Support:</strong> Get immediate answers to your questions, without waiting in line.
+            <strong style={{color:'#C0C0C0'}}>Instant Support:</strong> Get immediate answers to your questions, without waiting in line.
           </Typography>
         </li>
         <li style={{ marginBottom: '1rem' }}>
           <Typography variant="body1">
-            <strong>Smart Recommendations:</strong> Receive personalized product suggestions based on your needs.
+            <strong style={{color:'#C0C0C0'}}>Smart Recommendations:</strong> Receive personalized product suggestions based on your needs.
           </Typography>
         </li>
         <li style={{ marginBottom: '1rem' }}>
           <Typography variant="body1">
-            <strong>24/7 Availability:</strong> Our AI is always online, ready to assist you at any time.
+            <strong style={{color:'#C0C0C0'}}>24/7 Availability:</strong> Our AI is always online, ready to assist you at any time.
           </Typography>
         </li>
         <li style={{ marginBottom: '1rem' }}>
           <Typography variant="body1">
-            <strong>Human-Like Interaction:</strong> Enjoy conversations that feel natural and helpful.
+            <strong style={{color:'#C0C0C0'}}>Human-Like Interaction:</strong> Enjoy conversations that feel natural and helpful.
           </Typography>
         </li>
       </ul>
@@ -93,7 +93,7 @@ const HomePage = () => {
       }}
       data-aos="zoom-in" //AOS animation
     >
-      <Typography variant='h2' sx={{color: '#ffffff'}}>
+      <Typography variant='h2' sx={{color: '#ffffff',  }}>
         Coming soon a personalized sleep AI coach
       </Typography>
     </Box>
@@ -108,10 +108,11 @@ const HomePage = () => {
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
+          gap:'1rem'
         }}
         data-aos="zoom-in"
       >
-        <Typography variant="h2" sx={{ color: '#FFFFFF' }}>
+        <Typography variant="h2" sx={{ color: '#FFFFFF'}}>
           Transform Your Sleep with AI
         </Typography>
         <Typography variant="h5" sx={{ color: '#FFFFFF', marginTop: '1rem' }}>

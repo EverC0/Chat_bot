@@ -99,11 +99,8 @@ const Page = () => {
           }}
         >
           <Typography
-            margin={2}
-            fontWeight="bold"
-            fontSize="24px"
-            letterSpacing="1px"
-            color="#C0C0C0" 
+            
+            variant='h4' sx={{color: '#ffffff', margin:2 , color:"#C0C0C0" }}
             
           >
             Chat Bot
