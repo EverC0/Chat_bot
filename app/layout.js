@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import ctheme from './components/theme'
+import Script from 'next/script';
+
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,19 +17,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CBMC00V5W"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-7CBMC00V5W" />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-7CBMC00V5W');
-            `,
-          }}
-        />
-      </Head>
+            `}
+        </Script>
+  
       <body className={inter.className}>
         <ThemeProvider theme={ctheme}>
           <CssBaseline /> 
