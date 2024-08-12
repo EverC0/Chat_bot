@@ -19,15 +19,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-7CBMC00V5W" />
-          <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-7CBMC00V5W');
+              console.log('Google Analytics script loaded.');
             `}
         </Script>
-  
+            
       <body className={inter.className}>
         <ThemeProvider theme={ctheme}>
           <CssBaseline /> 
