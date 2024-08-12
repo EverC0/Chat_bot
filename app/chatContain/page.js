@@ -6,7 +6,7 @@ const Page = () => {
 
 
     const [messages, setMessages] = useState([
-        {role: 'assistant', content: "Hello! Thank you for reaching out to HeadStarter AI. How can I assist you today?"
+        {role: 'assistant', content: "Hello! Thank you for reaching out to SleepTune AI. How can I assist you today?"
         },
       ])
     

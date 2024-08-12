@@ -29,7 +29,7 @@ const HomePage = () => {
       data-aos="zoom-in" // AOS animation
       >
       <Typography variant="h2" sx ={{color: '#FFFFFF'}}>
-        Welcome to Chat Box AI
+        Welcome to SleepTune AI
       </Typography>
     </Box>
     {/* Content Section*/}
@@ -48,8 +48,8 @@ const HomePage = () => {
       <Typography variant="h4" sx={{ marginBottom: '1rem' }}>
         This is an AI customer support to help with your issues.
       </Typography>
-      <Typography variant="h5" sx={{ maxWidth: '800px', marginBottom: '2rem',  }}>
-        Our AI-driven chatbot is designed to provide instant assistance, answer your queries, and guide you through any challenges you may encounter. Whether it's troubleshooting, product recommendations, or just a quick question, our chatbot is here to help you 24/7.
+      <Typography variant="h5" sx={{ maxWidth: '800px', marginBottom: '2rem' }}>
+        Our AI-driven chatbot is designed to provide instant assistance, answer your queries, and guide you through any challenges you may encounter. Whether it&apos;s troubleshooting, product recommendations, or just a quick question, our chatbot is here to help you 24/7.
       </Typography>
       <Typography variant="h6" sx={{ maxWidth: '800px', paddingBottom:'2rem' }}>
         Key Features:
@@ -152,7 +152,7 @@ const HomePage = () => {
         data-aos="fade-up"
       >
         <Typography variant="h3" gutterBottom>
-          What You'll Get
+          What You&apos;ll Get
         </Typography>
         <Stack spacing={4} direction="row" justifyContent="center">
           <Box sx={{ maxWidth: 300 }}>

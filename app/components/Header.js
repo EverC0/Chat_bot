@@ -26,7 +26,7 @@ const Page = () => {
         >
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1, color:'#C0C0C0' }}>
-            ChatBox AI
+            SleepTune AI
           </Typography>
           <Button sx={{buttonStyles, color:'#C0C0C0'}} onClick={() => handleNavigation('/')}>
             Home
